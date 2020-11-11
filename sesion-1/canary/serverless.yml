@@ -3,9 +3,16 @@ service: sre
 provider:
   name: aws
   region: eu-west-3
-
+  
+  vpc:
+   securityGroupIds:
+    - lll
+   subnetIds:
+    - eee
+    - ddd
+    - yyy
   environment:
-    REDIS_HOST: ${env:REDIS_HOST}
+    REDIS_HOST: xxx
 
 functions:
   sre:
